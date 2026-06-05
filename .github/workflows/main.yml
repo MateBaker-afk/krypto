@@ -1,0 +1,22 @@
+name: Crypto Report
+on:
+  schedule:
+    - cron: '0 8 * * *' # Minden nap reggel 8:00 (UTC)
+  workflow_dispatch: # Kézzel is indítható
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run bot
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: python bot.py
