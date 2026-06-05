@@ -95,7 +95,8 @@ def build_message(portfolio: dict, prices: dict) -> str:
     lines.append(f"🇺🇸 <b>USD:</b> {format_usd(total_usd)}")
     lines.append(f"🇭🇺 <b>HUF:</b> {format_huf(total_huf)}")
     lines.append("")
-    lines.append("🔗 <i>Adatok forrása: CoinGecko</i>")
+    # 🔽 Módosított sor: kattintható link a CoinGecko szövegen
+    lines.append("🔗 <i>Adatok forrása: <a href='https://www.coingecko.com/'>CoinGecko</a></i>")
 
     return '\n'.join(lines)
 
