@@ -1,7 +1,7 @@
 name: Crypto Report
 on:
   schedule:
-    - cron: '13 5 * * *' # Minden nap reggel 8:00 (UTC)
+    - cron: '13 5,12,18 * * *' # Minden nap reggel 8:00 (UTC)
   workflow_dispatch: # Kézzel is indítható
 
 jobs:
