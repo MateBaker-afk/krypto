@@ -11,9 +11,9 @@ CHAT_ID = os.environ['CHAT_ID']
 #   Coin ID (CoinGecko szerinti) -> mennyiség
 # ──────────────────────────────────────────
 portfolio = {
-    'bitcoin':  0.5,
-    'ethereum': 2.0,
-    'solana':   10.0,
+    'bitcoin':  0.01854176,
+    'ethereum': 1.01853784,
+    'solana':   0.548591298,
     # 'cardano': 500,
     # 'ripple':  300,
 }
