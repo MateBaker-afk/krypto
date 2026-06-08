@@ -187,13 +187,7 @@ def build_message(portfolio: Dict[str, float], prices: Dict[str, Dict], history:
         lines.append(f"📊 <b>24h változás:</b> {trend} {change_str}")
         lines.append("")
 
-    # --- Összesítő szekció és Változás kiszámítása ---
-    prev_usd = history.get("previous_usd")
-    prev_huf = history.get("previous_huf")
-
-    lines.append("💼 <b>PORTFÓLIÓ ÖSSZÉRTÉK</b>")
-    
-# --- Összesítő szekció és Változás kiszámítása ---
+  # --- Összesítő szekció és Változás kiszámítása ---
     prev_usd = history.get("previous_usd")
     prev_huf = history.get("previous_huf")
 
@@ -215,7 +209,6 @@ def build_message(portfolio: Dict[str, float], prices: Dict[str, Dict], history:
     lines.append("🔗 <i>Adatok forrása: <a href='https://www.coingecko.com/'>CoinGecko</a></i>")
 
     return "\n".join(lines), total_usd, total_huf
-
 
 # ----------------------------- TELEGRAM KÜLDÉS ---------------------------------
 def send_telegram_msg(text: str) -> None:
